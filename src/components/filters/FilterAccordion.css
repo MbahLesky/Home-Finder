@@ -1,0 +1,43 @@
+.filter-accordion {
+  margin-bottom: 14px;
+}
+
+.filter-accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: left;
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-accordion-arrow {
+  font-size: 1rem;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+.filter-accordion-arrow.open {
+  transform: rotate(180deg);
+}
+
+.filter-accordion-options {
+  padding-left: 8px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-accordion-option {
+  font-size: 0.98rem;
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

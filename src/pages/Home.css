@@ -1,0 +1,24 @@
+.home-container {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.home-main-layout {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  gap: 24px;
+}
+
+.home-main-section {
+  flex: 1;
+  padding-top: 32px;
+}
+
+.property-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
