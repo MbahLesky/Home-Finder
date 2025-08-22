@@ -1,0 +1,627 @@
+{
+  "users": [
+    {
+      "firstName": "Jean",
+      "secondName": "Paul",
+      "lastName": "Ngong",
+      "email": "jean.ngong@example.com",
+      "phone": "+237650123456",
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Carrefour Bastos, Rue 12",
+      "password": "password123"
+    },
+    {
+      "firstName": "Aminatou",
+      "secondName": null,
+      "lastName": "Bello",
+      "email": "aminatou.bello@example.com",
+      "phone": "+237651987654",
+      "region": "Extreme-Nord",
+      "city": "Maroua",
+      "address": "Quartier Domayo, Rue 5",
+      "password": "aminatou321"
+    },
+    {
+      "firstName": "Kevin",
+      "secondName": "Junior",
+      "lastName": "Tchoumi",
+      "email": "kevin.tchoumi@example.com",
+      "phone": "+237652345678",
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Bonapriso, Rue des Manguiers",
+      "password": "kevinpass"
+    },
+    {
+      "firstName": "Clarisse",
+      "secondName": null,
+      "lastName": "Mbah",
+      "email": "clarisse.mbah@example.com",
+      "phone": "+237653876543",
+      "region": "North West",
+      "city": "Bamenda",
+      "address": "Nkwen Market Street",
+      "password": "clarisse@2025"
+    },
+    {
+      "firstName": "Dieudonné",
+      "secondName": null,
+      "lastName": "Essomba",
+      "email": "dieudonne.essomba@example.com",
+      "phone": "+237654765432",
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Melen, Rue des Palmiers",
+      "password": "essombaDieu"
+    },
+    {
+      "firstName": "Esther",
+      "secondName": "Marie",
+      "lastName": "Nana",
+      "email": "esther.nana@example.com",
+      "phone": "+237655234567",
+      "region": "West",
+      "city": "Bafoussam",
+      "address": "Quartier Kamkop, Rue 8",
+      "password": "nana2025"
+    },
+    {
+      "firstName": "Eric",
+      "secondName": "Alain",
+      "lastName": "Fongang",
+      "email": "eric.fongang@example.com",
+      "phone": "+237656678901",
+      "region": "West",
+      "city": "Dschang",
+      "address": "Université Quarter, Bloc B",
+      "password": "ericalain"
+    },
+    {
+      "firstName": "Patricia",
+      "secondName": null,
+      "lastName": "Ngassa",
+      "email": "patricia.ngassa@example.com",
+      "phone": "+237657345678",
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Bonamoussadi, Rue des Écoles",
+      "password": "patngassa"
+    },
+    {
+      "firstName": "Mohamed",
+      "secondName": "Issa",
+      "lastName": "Oumarou",
+      "email": "mohamed.oumarou@example.com",
+      "phone": "+237658234567",
+      "region": "Adamawa",
+      "city": "Ngaoundéré",
+      "address": "Quartier Dang, Rue 3",
+      "password": "mohiss2025"
+    },
+    {
+      "firstName": "Sylvie",
+      "secondName": "Claire",
+      "lastName": "Abena",
+      "email": "sylvie.abena@example.com",
+      "phone": "+237659876543",
+      "region": "South",
+      "city": "Ebolowa",
+      "address": "Carrefour Mekeme",
+      "password": "sylviepass"
+    },
+    {
+      "firstName": "Roland",
+      "secondName": null,
+      "lastName": "Moukouri",
+      "email": "roland.moukouri@example.com",
+      "phone": "+237650987654",
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Akwa, Boulevard de la Liberté",
+      "password": "roland321"
+    },
+    {
+      "firstName": "Fadimatou",
+      "secondName": null,
+      "lastName": "Aboubakar",
+      "email": "fadimatou.aboubakar@example.com",
+      "phone": "+237651765432",
+      "region": "North",
+      "city": "Garoua",
+      "address": "Quartier Marouaré",
+      "password": "fadima2025"
+    },
+    {
+      "firstName": "Blaise",
+      "secondName": "Armand",
+      "lastName": "Nkoue",
+      "email": "blaise.nkoue@example.com",
+      "phone": "+237652112233",
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Mvog-Mbi, Rue 14",
+      "password": "blaisenk"
+    },
+    {
+      "firstName": "Gladys",
+      "secondName": null,
+      "lastName": "Fonkwa",
+      "email": "gladys.fonkwa@example.com",
+      "phone": "+237653556677",
+      "region": "West",
+      "city": "Bafang",
+      "address": "Marché Central Street",
+      "password": "gladys2025"
+    },
+    {
+      "firstName": "Arnaud",
+      "secondName": null,
+      "lastName": "Nji",
+      "email": "arnaud.nji@example.com",
+      "phone": "+237654334455",
+      "region": "North West",
+      "city": "Bamenda",
+      "address": "Up Station, Rue des Églises",
+      "password": "njiPass"
+    },
+    {
+      "firstName": "Mireille",
+      "secondName": "Josiane",
+      "lastName": "Obiang",
+      "email": "mireille.obiang@example.com",
+      "phone": "+237655223344",
+      "region": "South",
+      "city": "Kribi",
+      "address": "Rue de la Plage",
+      "password": "mireille123"
+    },
+    {
+      "firstName": "Hervé",
+      "secondName": null,
+      "lastName": "Mbarga",
+      "email": "herve.mbarga@example.com",
+      "phone": "+237656778899",
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Essos, Rue du Marché",
+      "password": "hervemb"
+    },
+    {
+      "firstName": "Solange",
+      "secondName": "Chantal",
+      "lastName": "Nguefack",
+      "email": "solange.nguefack@example.com",
+      "phone": "+237657889900",
+      "region": "West",
+      "city": "Bafoussam",
+      "address": "Quartier Djeleng",
+      "password": "solangepass"
+    },
+    {
+      "firstName": "Hamidou",
+      "secondName": null,
+      "lastName": "Djibril",
+      "email": "hamidou.djibril@example.com",
+      "phone": "+237658990011",
+      "region": "Far North",
+      "city": "Kousseri",
+      "address": "Marché Central",
+      "password": "hamidou2025"
+    },
+    {
+      "firstName": "Christelle",
+      "secondName": null,
+      "lastName": "Ebong",
+      "email": "christelle.ebong@example.com",
+      "phone": "+237659221133",
+      "region": "South West",
+      "city": "Limbe",
+      "address": "Church Street",
+      "password": "christelle321"
+    }
+  ],
+  "properties": [
+    {
+      "id": "prop-001",
+      "type": "family home",
+      "status": "for sale",
+      "name": "Ngousso Family House",
+      "size": 180,
+      "noOfRooms": 4,
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Ngousso, Rue 14",
+      "latitude": 3.848,
+      "longitude": 11.502,
+      "installment": "monthly",
+      "moreInfo": "A spacious family home with a small garden.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "https://images.unsplash.com/photo-1599427303058-f04f9b389b0c"
+      ],
+      "video": "https://sample-videos.com/video123/mp4/720/big_buck_bunny.mp4"
+    },
+    {
+      "id": "prop-002",
+      "type": "apartment",
+      "status": "for rent",
+      "name": "Bonapriso 2-Bed Apartment",
+      "size": 95,
+      "noOfRooms": 2,
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Bonapriso, Rue des Écoles",
+      "latitude": 4.051,
+      "longitude": 9.767,
+      "installment": "monthly",
+      "moreInfo": "Modern furnished apartment close to shops and restaurants.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1502005229762-cf1b2da7c3f5",
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-003",
+      "type": "land",
+      "status": "for sale",
+      "name": "Buea Town Plot",
+      "size": 650,
+      "noOfRooms": null,
+      "region": "South West",
+      "city": "Buea",
+      "address": "Buea Town, near checkpoint",
+      "latitude": 4.154,
+      "longitude": 9.241,
+      "installment": "quarterly",
+      "moreInfo": "Suitable for residential development, fenced plot.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+        "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-004",
+      "type": "villa",
+      "status": "for sale",
+      "name": "Bastos Luxury Villa",
+      "size": 350,
+      "noOfRooms": 6,
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Bastos, near Golf",
+      "latitude": 3.889,
+      "longitude": 11.517,
+      "installment": "yearly",
+      "moreInfo": "High-end villa with swimming pool and large compound.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+        "https://images.unsplash.com/photo-1494526585095-c41746248156"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-005",
+      "type": "vehicle",
+      "status": "for sale",
+      "name": "Toyota Hilux Pickup",
+      "size": null,
+      "noOfRooms": null,
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Akwa, Boulevard de la Liberté",
+      "latitude": 4.048,
+      "longitude": 9.706,
+      "installment": "cash",
+      "moreInfo": "Used Toyota Hilux in excellent condition.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-006",
+      "type": "condo",
+      "status": "for rent",
+      "name": "Bonanjo Condo",
+      "size": 120,
+      "noOfRooms": 3,
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Bonanjo Business District",
+      "latitude": 4.057,
+      "longitude": 9.706,
+      "installment": "monthly",
+      "moreInfo": "Condo with balcony and secure parking.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-007",
+      "type": "resort",
+      "status": "for sale",
+      "name": "Kribi Beach Resort",
+      "size": 5000,
+      "noOfRooms": 30,
+      "region": "South",
+      "city": "Kribi",
+      "address": "Kribi, Rue de la Plage",
+      "latitude": 2.940,
+      "longitude": 9.910,
+      "installment": "yearly",
+      "moreInfo": "Beachfront resort with 30 rooms and bar/restaurant.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-008",
+      "type": "warehouse",
+      "status": "for rent",
+      "name": "Douala Industrial Warehouse",
+      "size": 1200,
+      "noOfRooms": null,
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Bonaberi Industrial Zone",
+      "latitude": 4.083,
+      "longitude": 9.687,
+      "installment": "monthly",
+      "moreInfo": "Spacious warehouse suitable for storage or logistics.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1600585154154-1d1f9e9c0b08",
+        "https://images.unsplash.com/photo-1600585154207-d7d44bade34b"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-009",
+      "type": "sports-arena",
+      "status": "for sale",
+      "name": "Bamenda Community Stadium",
+      "size": 7000,
+      "noOfRooms": null,
+      "region": "North West",
+      "city": "Bamenda",
+      "address": "Mile 2 Nkwen",
+      "latitude": 5.963,
+      "longitude": 10.159,
+      "installment": "yearly",
+      "moreInfo": "Medium-size stadium with stands, locker rooms, and parking.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+        "https://images.unsplash.com/photo-1600585154210-c93f3a31d052"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-010",
+      "type": "commercial",
+      "status": "for rent",
+      "name": "Akwa Commercial Building",
+      "size": 800,
+      "noOfRooms": 12,
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Akwa, Rue Joffre",
+      "latitude": 4.048,
+      "longitude": 9.706,
+      "installment": "monthly",
+      "moreInfo": "12-office commercial building in central Douala.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1600585154154-1d1f9e9c0b08",
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-011",
+      "type": "land",
+      "status": "for sale",
+      "name": "Garoua Agricultural Land",
+      "size": 3000,
+      "noOfRooms": null,
+      "region": "North",
+      "city": "Garoua",
+      "address": "Marouaré Outskirts",
+      "latitude": 9.305,
+      "longitude": 13.393,
+      "installment": "cash",
+      "moreInfo": "Fertile agricultural land suitable for crops and livestock.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+        "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-012",
+      "type": "villa",
+      "status": "for rent",
+      "name": "Limbe Sea View Villa",
+      "size": 280,
+      "noOfRooms": 5,
+      "region": "South West",
+      "city": "Limbe",
+      "address": "Down Beach, Rue de la Mer",
+      "latitude": 4.018,
+      "longitude": 9.215,
+      "installment": "monthly",
+      "moreInfo": "Ocean-view villa with terrace and parking.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1560448075-bb4bf3a7f7f4",
+        "https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-013",
+      "type": "apartment",
+      "status": "for sale",
+      "name": "Maroua 3-Bed Apartment",
+      "size": 105,
+      "noOfRooms": 3,
+      "region": "Extreme-Nord",
+      "city": "Maroua",
+      "address": "Domayo Quarter",
+      "latitude": 10.595,
+      "longitude": 14.324,
+      "installment": "quarterly",
+      "moreInfo": "Comfortable apartment with 3 bedrooms, balcony, and modern kitchen.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1502005229762-cf1b2da7c3f5",
+        "https://images.unsplash.com/photo-1494526585095-c41746248156"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-014",
+      "type": "warehouse",
+      "status": "for sale",
+      "name": "Bafoussam Logistics Warehouse",
+      "size": 2000,
+      "noOfRooms": null,
+      "region": "West",
+      "city": "Bafoussam",
+      "address": "Ndieng Industrial Zone",
+      "latitude": 5.471,
+      "longitude": 10.417,
+      "installment": "cash",
+      "moreInfo": "Large warehouse ideal for logistics companies.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1600585154207-d7d44bade34b",
+        "https://images.unsplash.com/photo-1600585154154-1d1f9e9c0b08"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-015",
+      "type": "resort",
+      "status": "for sale",
+      "name": "Ebolowa Eco Resort",
+      "size": 4500,
+      "noOfRooms": 25,
+      "region": "South",
+      "city": "Ebolowa",
+      "address": "Carrefour Mekeme",
+      "latitude": 2.907,
+      "longitude": 11.153,
+      "installment": "yearly",
+      "moreInfo": "Eco-friendly resort with 25 rooms, pool, and conference hall.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-016",
+      "type": "condo",
+      "status": "for rent",
+      "name": "Bastos Executive Condo",
+      "size": 150,
+      "noOfRooms": 3,
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Bastos, near embassy area",
+      "latitude": 3.889,
+      "longitude": 11.514,
+      "installment": "monthly",
+      "moreInfo": "Premium condo with security, gym, and pool access.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-017",
+      "type": "sports-arena",
+      "status": "for rent",
+      "name": "Douala Mini Sports Arena",
+      "size": 4500,
+      "noOfRooms": null,
+      "region": "Littoral",
+      "city": "Douala",
+      "address": "Bonamoussadi Sports Complex",
+      "latitude": 4.061,
+      "longitude": 9.763,
+      "installment": "yearly",
+      "moreInfo": "Sports arena for football, basketball, and community events.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+        "https://images.unsplash.com/photo-1600585154210-c93f3a31d052"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-018",
+      "type": "commercial",
+      "status": "sold",
+      "name": "Yaoundé Business Plaza",
+      "size": 1200,
+      "noOfRooms": 15,
+      "region": "Centre",
+      "city": "Yaoundé",
+      "address": "Avenue Kennedy",
+      "latitude": 3.864,
+      "longitude": 11.516,
+      "installment": "cash",
+      "moreInfo": "Recently sold business plaza with 15 office units.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1600585154154-1d1f9e9c0b08",
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-019",
+      "type": "vehicle",
+      "status": "for sale",
+      "name": "Land Cruiser Prado",
+      "size": null,
+      "noOfRooms": null,
+      "region": "Adamawa",
+      "city": "Ngaoundéré",
+      "address": "Quartier Dang",
+      "latitude": 7.325,
+      "longitude": 13.586,
+      "installment": "cash",
+      "moreInfo": "Brand new Toyota Land Cruiser Prado available immediately.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+      ],
+      "video": null
+    },
+    {
+      "id": "prop-020",
+      "type": "family home",
+      "status": "rented out",
+      "name": "Bamenda Family Duplex",
+      "size": 210,
+      "noOfRooms": 5,
+      "region": "North West",
+      "city": "Bamenda",
+      "address": "Up Station, near Governor's Office",
+      "latitude": 5.963,
+      "longitude": 10.159,
+      "installment": "yearly",
+      "moreInfo": "Family duplex with backyard and garage, already rented out.",
+      "listOfPhotos": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "https://images.unsplash.com/photo-1599427303058-f04f9b389b0c"
+      ],
+      "video": null
+    }
+  ],
+  "likes": []
+}
