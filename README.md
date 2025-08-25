@@ -1,3 +1,39 @@
+# Home Finder Project Structure
+
+## Project Files and Folders
+
+- **package.json**: Lists project dependencies, scripts, and metadata for npm.
+- **package-lock.json**: Automatically generated for any operations where npm modifies either the node_modules tree or package.json. Describes the exact dependency tree.
+- **node_modules/**: Contains all npm packages installed for the project. Do not edit manually.
+- **public/**: Static files served directly, such as `index.html`, icons, and manifest files.
+- **src/**: Main source code for the React app.
+	- **components/**: Reusable UI components (buttons, cards, accordions, etc).
+	- **layouts/**: Layout components for structuring pages (Header, Sidebar, etc).
+	- **pages/**: Top-level pages for routing (HomePage, ProfilePage, PropertyPage, etc).
+	- **auth/**: Authentication-related pages (SignIn, SignUp).
+	- **App.js**: Root React component, sets up routing.
+	- **index.js**: Entry point for the React app, renders App into the DOM.
+	- **router.js**: Defines and exports the app's route configuration.
+- **images/**: Contains design mockups and screenshots for reference.
+
+## Design Mockups & Screenshots
+
+Below are the design images and mockups for the Home Finder app, located in the `images/` folder:
+
+| Image | Description |
+|-------|-------------|
+| ![Home Page](images/Home%20Page.png) | Home Page design |
+| ![Login Page](images/Login%20Page.png) | Login Page design |
+| ![Register Page](images/Register%20Page.png) | Register Page design |
+| ![Profile Page - My Profile Tab](images/Profile%20Page%20-%20My%20Profile%20Tab.png) | Profile Page - My Profile Tab |
+| ![Profile Page - My Properties Tab](images/Profile%20Page%20-%20My%20Properties%20Tab.png) | Profile Page - My Properties Tab |
+| ![Profile Page - Saved Properties Tab](images/Profile%20Page%20-%20Saved%20Properties%20Tab.png) | Profile Page - Saved Properties Tab |
+| ![Profile Page - Add Property Tab - Information About The Property Form](images/Profile%20Page%20-%20Add%20Property%20Tab%20-%20Information%20About%20The%20Property%20Form.png) | Add Property Tab - Information Form |
+| ![Profile Page - Add Property Tab - Sale or Rent Property Option](images/Profile%20Page%20-%20Add%20Property%20Tab%20-%20Sale%20or%20Rent%20Property%20Option.png) | Add Property Tab - Sale or Rent Option |
+| ![Profile Page - Add Property Tab - Select Propert Type Form](images/Profile%20Page%20-%20Add%20Property%20Tab%20-%20Select%20Propert%20Type%20Form.png) | Add Property Tab - Select Property Type |
+| ![Profile Page - Add Property Tab - Upload Media for the Property Form](images/Profile%20Page%20-%20Add%20Property%20Tab%20-%20Upload%20Media%20for%20the%20Property%20Form.png) | Add Property Tab - Upload Media |
+| ![Property Page](images/Property%20Page.png) | Property Page design |
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,3 +1,6 @@
+// router.js
+// This file defines the application's route configuration using React Router.
+// It maps URL paths to page components and exports the router for use in App.js.
 import SignUp from "./pages/auth/SignUp";
 import SignIn from "./pages/auth/SignIn";
 import HomePage from "./pages/HomePage";
