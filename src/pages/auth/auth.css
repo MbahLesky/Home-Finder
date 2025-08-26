@@ -1,0 +1,32 @@
+.auth-page {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.gray-box {
+    background-color: var(--color-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+}
