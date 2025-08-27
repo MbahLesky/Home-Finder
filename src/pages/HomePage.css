@@ -1,0 +1,20 @@
+.homepage-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background: var(--color-primary-light);
+  border-radius: 12px;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
