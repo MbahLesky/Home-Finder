@@ -1,18 +1,32 @@
 import './propertypage.css';
 import Images from '../assets/index';
+import React, { useState } from 'react';
 
 const galleryImages = Images;
 
 function PropertyPage() {
+  const [mainIndex, setMainIndex] = useState(0);
+
+  const handleThumbnailClick = (idx) => {
+    setMainIndex(idx);
+  };
+
   return (
     <div className="propertypage-container">
       <div className="property-gallery">
         <div className="main-image">
-          <img src={galleryImages[0]} alt="Property" className="main-property-img" />
+          <img src={galleryImages[mainIndex]} alt="Property" className="main-property-img" />
         </div>
         <div className="gallery-thumbnails">
           {galleryImages.map((img, idx) => (
-            <img key={idx} src={img} alt={`Thumbnail ${idx + 1}`} className="thumbnail-img" />
+            <img
+              key={idx}
+              src={img}
+              alt={`Thumbnail ${idx + 1}`}
+              className="thumbnail-img"
+              onClick={() => handleThumbnailClick(idx)}
+              style={{ cursor: 'pointer', border: mainIndex === idx ? '2px solid var(--color-primary)' : undefined }}
+            />
           ))}
         </div>
       </div>
@@ -43,9 +57,9 @@ function PropertyPage() {
           </div>
         </div>
         <div className="property-contact">
-          <h2>Contact Owner</h2>
+          <h1>Contact Owner</h1>
           <div className="owner-name">Fonbah Elias</div>
-          <div className="contact-buttons">
+          <div className="contact-buttons contact-grid">
             <button className="contact-btn call">📞 Call</button>
             <button className="contact-btn message">💬 Message</button>
             <button className="contact-btn email">✉️ Email</button>
