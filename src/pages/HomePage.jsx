@@ -1,9 +1,9 @@
-function HomePage() {
-    return (
-        <div>
-            <h1>Welcome to Home Finder</h1>
-        </div>
-    )
+import Header from "../layouts/Header";
+
+function HomePage(){
+    return <div>
+        <Header />
+    </div>
 }
 
 export default HomePage;

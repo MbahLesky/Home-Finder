@@ -3,11 +3,16 @@
 // It maps URL paths to page components and exports the router for use in App.js.
 import SignUp from "./pages/auth/SignUp";
 import SignIn from "./pages/auth/SignIn";
+
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import PropertyPage from "./pages/PropertyPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import PropertiesPage from "./pages/PropertiesPage";
 
 import { createBrowserRouter } from "react-router-dom";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -15,6 +20,9 @@ const router = createBrowserRouter([
   { path: "/signin", element: <SignIn /> },
   { path: "/profile", element: <ProfilePage /> },
   { path: "/property/:id", element: <PropertyPage /> },
+  { path: "/about", element: <AboutPage /> },
+  { path: "/contact", element: <ContactPage /> },
+  { path: "/properties", element: <PropertiesPage /> },
 ]);
 
 export default router;
