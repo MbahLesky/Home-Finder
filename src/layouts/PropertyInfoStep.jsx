@@ -4,7 +4,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import "./PropertyInfoStep.css";
 
-function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
+function PropertyInfoStep({ saleOrRent, onBack }) {
   const location = useLocation();
   const propertyType = location.state?.propertyType || "";
 
