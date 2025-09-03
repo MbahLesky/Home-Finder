@@ -1,8 +1,9 @@
+
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Header from "../layouts/Header";
 import Sidebar from "../layouts/Sidebar";
 import "./SelectPropertyType.css";
+
 const propertyTypes = [
   "Family home",
   "Apartment",
@@ -16,17 +17,13 @@ const propertyTypes = [
   "Church",
 ];
 
-function SelectPropertyType() {
-  const navigate = useNavigate();
+function SelectPropertyType({ onNext }) {
   const handleSelect = (type) => {
-    //Navigate to sale/rent step, passing property type
-    navigate("/add-property/sale-rent", { state: { propertyType: type } });
+    if (onNext) onNext(type);
   };
   return (
     <div className="profile-layout">
-      <Header />
       <div className="profile-content">
-        <Sidebar activeStep={1} />
         <main className="profile-main">
           <h1 className="profile-title">Select Property Type</h1>
           <div className="property-type-list">
@@ -34,7 +31,7 @@ function SelectPropertyType() {
               <button
                 key={type}
                 className="property-type-btn"
-                onClick={() => handleSelect(`Selected: ${type}`)}
+                onClick={() => handleSelect(type)}
               >
                 {type}
               </button>
