@@ -10,12 +10,13 @@ import React from 'react';
  * @param {React.ReactNode} [endElement] - Optional element to render at the end (icon, button, etc)
  * @param {object} [props] - Other input props
  */
-function TextField({ id, type = 'text', placeholder, label, errorText, value, name, onChange, startElement, endElement, ...props }) {
+
+function TextField({ id, type = 'text', placeholder, label, errorText, value, name, onChange, startElement, endElement, isInvalid = false, ...props }) {
   return (
-    <div className="input-field">
-      {label && <label style={{ fontWeight: 500, marginBottom: 2 }}>{label}</label>}
-      <div style={{ display: 'flex', alignItems: 'center', border: '1.5px solid #cbd5e1', borderRadius: 6, background: '#fff', padding: '0 8px' }}>
-        {startElement && <span style={{ marginRight: 6 }}>{startElement}</span>}
+    <div className={`input-element${isInvalid ? ' invalid' : ''}`}>
+      {label && <label className="input-label">{label}</label>}
+      <div className="input-field">
+        {startElement && <span className="input-icon input-icon-start">{startElement}</span>}
         <input
           id={id}
           type={type}
@@ -23,12 +24,11 @@ function TextField({ id, type = 'text', placeholder, label, errorText, value, na
           value={value}
           name={name}
           onChange={onChange}
-          style={{ flex: 1, border: 'none', outline: 'none', fontSize: '1.08rem', padding: '10px 0', background: 'transparent' }}
           {...props}
         />
-        {endElement && <span style={{ marginLeft: 6 }}>{endElement}</span>}
+        {endElement && <span className="input-icon input-icon-end">{endElement}</span>}
       </div>
-      {errorText && <p className="error-text">{errorText}</p>}
+      {errorText && isInvalid && <p className="error-text">{errorText}</p>}
     </div>
   );
 }

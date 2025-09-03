@@ -34,7 +34,7 @@ function PropertyInfoStep({ saleOrRent, onBack }) {
 
   return (
     <div className="profile-layout">
-      <div className="profile-content">
+      <div className="profile-context">
         <main className="profile-main">
           <h1 className="profile-title">
             <span style={{ display: "flex", alignItems: "center" }}>
