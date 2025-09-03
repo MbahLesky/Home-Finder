@@ -1,0 +1,23 @@
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-primary-light) !important;
+    width: 100%;
+}
+
+.input-field .error-text {
+    color: red;
+    font-size: 12px;
+
+}
+
+select:focus {
+    outline: 2px solid var(--color-primary);
+}
