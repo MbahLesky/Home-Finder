@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import "./PropertyInfoStep.css";
 
 function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
+  const location = useLocation();
+  const propertyType = location.state?.propertyType || "";
+
+  const [form, setForm] = useState({
+    rooms: "",
+    region: "",
+    city: "",
+    installment: "",
+    price: ""
+  });
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setMessage("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!form.rooms || !form.region || !form.city || !form.installment || !form.price) {
+      setMessage("Please input all required fields.");
+    } else {
+      setMessage("All values are correct. You can move to the next step.");
+    }
+  };
+
   return (
     <div className="profile-layout">
       <div className="profile-content">
@@ -25,7 +53,7 @@ function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
               Information about the property
             </span>
           </h1>
-          <form className="property-info-form">
+          <form className="property-info-form" onSubmit={handleSubmit}>
             <div className="property-info-left">
               <div className="input-box input-row">
                 <div>
@@ -34,7 +62,13 @@ function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
                 </div>
                 <div>
                   <label>No of Rooms</label>
-                  <input type="number" placeholder="Enter number of rooms" />
+                  <input
+                    type="number"
+                    name="rooms"
+                    value={form.rooms}
+                    onChange={handleChange}
+                    placeholder="Enter number of rooms"
+                  />
                 </div>
               </div>
               <div className="input-box">
@@ -42,14 +76,25 @@ function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
                 <div className="location-row">
                   <div>
                     <label>Region</label>
-                    <select>
-                      <option>Select region</option>
+                    <select name="region" value={form.region} onChange={handleChange}>
+                      <option value="">Select region</option>
+                      <option value="Adamawa">Adamawa</option>
+                      <option value="Centre">Centre</option>
+                      <option value="East">East</option>
+                      <option value="Far North">Far North</option>
+                      <option value="Littoral">Littoral</option>
+                      <option value="North">North</option>
+                      <option value="Northwest">Northwest</option>
+                      <option value="South">South</option>
+                      <option value="Southwest">Southwest</option>
+                      <option value="West">West</option>
                     </select>
                   </div>
                   <div>
                     <label>City</label>
-                    <select>
-                      <option>Select city</option>
+                    <select name="city" value={form.city} onChange={handleChange}>
+                      <option value="">Select city</option>
+                      {/* Add city options here */}
                     </select>
                   </div>
                 </div>
@@ -72,14 +117,25 @@ function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
               <div className="input-box input-row">
                 <div>
                   <label>Installment</label>
-                  <select>
-                    <option>Select installment</option>
+                  <select name="installment" value={form.installment} onChange={handleChange}>
+                    <option value="">Select installment</option>
+                    <option value="hourly">hourly</option>
+                    <option value="daily">daily</option>
+                    <option value="weekly">weekly</option>
+                    <option value="monthly">monthly</option>
+                    <option value="yearly">yearly</option>
                   </select>
                 </div>
                 <div>
                   <label>Price</label>
                   <div style={{ display: "flex", alignItems: "center" }}>
-                    <input type="number" placeholder="Enter amount per installm" />
+                    <input
+                      type="number"
+                      name="price"
+                      value={form.price}
+                      onChange={handleChange}
+                      placeholder="Enter amount per installm"
+                    />
                     <span className="currency-label">FCFA</span>
                   </div>
                 </div>
@@ -88,6 +144,11 @@ function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
                 <label>Additional Information</label>
                 <textarea placeholder="Additional Information"></textarea>
               </div>
+              {message && (
+                <div style={{ color: message.includes("correct") ? "green" : "red", marginBottom: 10, textAlign: 'center' }}>
+                  {message}
+                </div>
+              )}
               <button type="submit" className="next-btn">
                 Next
               </button>
