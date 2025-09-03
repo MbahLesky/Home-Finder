@@ -1,27 +1,27 @@
+
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import "./SelectPropertyType.css";
 
-function SaleRentStep() {
-  const location = useLocation();
-  const propertyType = location.state?.propertyType || "";
-  const navigate = useNavigate();
-
+function SaleRentStep({ propertyType, onNext, onBack }) {
   const handleSelect = (saleOrRent) => {
-    navigate("/add-property/info", {
-      state: { propertyType, saleOrRent }
-    });
+    if (onNext) onNext(saleOrRent);
   };
-
   return (
     <div className="profile-layout">
-      <Header />
       <div className="profile-content">
-        <Sidebar activeStep={2} />
         <main className="profile-main">
-          <h1 className="profile-title">Sale or rent property?</h1>
+          <h1 className="profile-title">
+            <span style={{ display: 'flex', alignItems: 'center' }}>
+              <span
+                style={{ color: '#8a5be6', fontSize: '2rem', marginRight: '1rem', cursor: 'pointer' }}
+                onClick={onBack}
+                title="Back"
+              >&#8592;</span>
+              Sale or rent property?
+            </span>
+          </h1>
           <div className="property-type-list">
             <button
               className="property-type-btn"

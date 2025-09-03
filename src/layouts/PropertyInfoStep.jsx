@@ -1,19 +1,12 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import "./PropertyInfoStep.css";
 
-function PropertyInfoStep() {
-  const location = useLocation();
-  const propertyType = location.state?.propertyType || "";
-  const saleOrRent = location.state?.saleOrRent || "";
-
+function PropertyInfoStep({ propertyType, saleOrRent, onBack }) {
   return (
     <div className="profile-layout">
-      <Header />
       <div className="profile-content">
-        <Sidebar activeStep={3} />
         <main className="profile-main">
           <h1 className="profile-title">
             <span style={{ display: "flex", alignItems: "center" }}>
@@ -24,7 +17,8 @@ function PropertyInfoStep() {
                   marginRight: "1rem",
                   cursor: "pointer"
                 }}
-                onClick={() => window.history.back()}
+                onClick={onBack}
+                title="Back"
               >
                 &#8592;
               </span>
