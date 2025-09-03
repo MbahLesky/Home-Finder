@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import MyProfile from '../layouts/MyProfile.jsx';
 import LikePropertyList from '../layouts/LikePropertyList.jsx';

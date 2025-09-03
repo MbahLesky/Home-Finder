@@ -10,7 +10,7 @@ import React from 'react';
  * @param {React.ReactNode} [endElement] - Optional element to render at the end (icon, button, etc)
  * @param {object} [props] - Other input props
  */
-function TextField({ id, type = 'text', placeholder, label, errorText, value, startElement, endElement, ...props }) {
+function TextField({ id, type = 'text', placeholder, label, errorText, value, name, onChange, startElement, endElement, ...props }) {
   return (
     <div className="input-field">
       {label && <label style={{ fontWeight: 500, marginBottom: 2 }}>{label}</label>}
@@ -21,6 +21,8 @@ function TextField({ id, type = 'text', placeholder, label, errorText, value, st
           type={type}
           placeholder={placeholder}
           value={value}
+          name={name}
+          onChange={onChange}
           style={{ flex: 1, border: 'none', outline: 'none', fontSize: '1.08rem', padding: '10px 0', background: 'transparent' }}
           {...props}
         />
