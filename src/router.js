@@ -11,18 +11,22 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import PropertiesPage from "./pages/PropertiesPage";
 
+import MainLayout from "./layouts/MainLayout.jsx";
+
 import { createBrowserRouter } from "react-router-dom";
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
+  {
+    element: <MainLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/profile", element: <ProfilePage /> },
+      { path: "/property/:id", element: <PropertyPage /> },
+    ],
+  },
   { path: "/signup", element: <SignUp /> },
   { path: "/signin", element: <SignIn /> },
-  { path: "/profile", element: <ProfilePage /> },
-  { path: "/property/:id", element: <PropertyPage /> },
-  { path: "/about", element: <AboutPage /> },
-  { path: "/contact", element: <ContactPage /> },
-  { path: "/properties", element: <PropertiesPage /> },
 ]);
 
 export default router;
