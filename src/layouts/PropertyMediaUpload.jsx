@@ -18,6 +18,8 @@ const sideSteps = [
 export default function PropertyMediaUpload() {
   const [photos, setPhotos] = useState([]);
   const [video, setVideo] = useState(null);
+  const [uploading, setUploading] = useState(false);
+  const [uploadMessage, setUploadMessage] = useState("");
 
   const handlePhotoSelect = (e) => {
     const files = Array.from(e.target.files).slice(0, 6);
@@ -26,6 +28,38 @@ export default function PropertyMediaUpload() {
 
   const handleVideoSelect = (e) => {
     setVideo(e.target.files[0]);
+  };
+
+  const handleUpload = async () => {
+    if (photos.length === 0 && !video) {
+      setUploadMessage("Please select images or a video to upload.");
+      return;
+    }
+    setUploading(true);
+    setUploadMessage("");
+    const formData = new FormData();
+    photos.forEach((photo, idx) => {
+      formData.append(`images`, photo);
+    });
+    if (video) {
+      formData.append("video", video);
+    }
+    try {
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+      if (response.ok) {
+        setUploadMessage("Upload successful!");
+        setPhotos([]);
+        setVideo(null);
+      } else {
+        setUploadMessage("Upload failed. Please try again.");
+      }
+    } catch (error) {
+      setUploadMessage("Error uploading files.");
+    }
+    setUploading(false);
   };
 
   return (
@@ -49,7 +83,10 @@ export default function PropertyMediaUpload() {
           </div>
         </aside>
         <main className="pmu-content">
-          <h1 className="pmu-title">Upload media for the property</h1>
+          <h1 className="pmu-title" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ cursor: 'pointer', fontSize: '32px' }} title="Go Back">🡸</span>
+            Upload media for the property
+          </h1>
           <div className="pmu-photo-section">
             <div className="pmu-photo-grid">
               {photos.length > 0
@@ -90,7 +127,10 @@ export default function PropertyMediaUpload() {
               </label>
               <button className="pmu-btn pmu-clear" onClick={() => setVideo(null)}>Clear Video</button>
             </div>
-            <button className="pmu-btn pmu-upload">Upload</button>
+            <button className="pmu-btn pmu-upload" onClick={handleUpload} disabled={uploading}>
+              {uploading ? "Uploading..." : "Upload"}
+            </button>
+            {uploadMessage && <div className="pmu-upload-message">{uploadMessage}</div>}
           </div>
         </main>
       </div>

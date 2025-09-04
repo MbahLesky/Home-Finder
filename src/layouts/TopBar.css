@@ -1,0 +1,84 @@
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
+  background-color: #f0f0f0; /* A light grey background */
+  border-bottom: 30px solid #fff; /* A subtle bottom border */
+  font-family: Arial, sans-serif;
+}
+
+.top-bar-left,
+.top-bar-center,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 70px;
+  font-weight: bold;
+  color: #610fc7;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px 20px;
+  padding-right: 1000px;
+  width: 400px;
+  position: relative;
+}
+
+.search-icon {
+  margin-right: 12px;
+  font-size: 32px;
+  color: #230dc7;
+  align-self: flex-start;
+}
+/* Make input fill the rest of the search bar */
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 50px;
+  background: transparent;
+  padding-left: 0;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 160px;
+}
+
+.top-bar-right {
+  gap: 15px;
+}
+
+.icon-wrapper,
+.profile-icon {
+  background-color: #556cff; /* A blue background for the icon */
+  color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  background-color: #fff; /* A grey background for the profile icon */
+  color: #7d7474;
+}
+
+.heart-icon,
+.profile-img {
+  font-size: 60px;
+}
