@@ -1,0 +1,98 @@
+/* Small logo and welcome text for compact header */
+.small-logo-welcome {
+	gap: 6px !important;
+	margin-bottom: 4px !important;
+}
+.small-real-estate-logo {
+	width: 28px !important;
+	height: 28px !important;
+	border-radius: 10px !important;
+}
+.small-welcome-text {
+	font-size: 1.1rem !important;
+	margin-left: 6px !important;
+}
+/* Navigation styles for better spacing */
+.nav {
+	display: flex;
+	gap: 40px;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: #222;
+	font-size: 1.22rem;
+	font-weight: 700;
+	letter-spacing: 0.7px;
+	transition: color 0.2s, border-bottom 0.2s;
+	position: relative;
+	padding: 8px 0;
+	margin: 0 20px;
+	border-bottom: 2.5px solid transparent;
+	border-radius: 4px;
+}
+.nav-link:hover, .nav-link:focus {
+	color: #ffd700;
+	border-bottom: 2.5px solid #ffd700;
+	background: rgba(255,255,255,0.12);
+}
+.nav-link::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2.5px;
+	background: #ffd700;
+	transition: width 0.3s;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+}
+.nav-link:hover::after, .nav-link:focus::after {
+	width: 100%;
+}
+.header-searchbar-row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 18px 0 0 0;
+}
+header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 32px;
+	box-sizing: border-box;
+}
+
+ .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Luxury Header Styles */
+.header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fff;
+	padding: 40px 0 0 0;
+	width: 100%;
+	min-height: 200px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+	border-bottom-left-radius: 32px;
+	border-bottom-right-radius: 32px;
+	position: relative;
+	font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+	box-sizing: border-box;
+}
+
