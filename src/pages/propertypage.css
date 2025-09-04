@@ -1,0 +1,180 @@
+/* PropertyPage Image and Layout Styles */
+
+.propertypage-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+}
+
+.propertypage-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.propertypage-main-image {
+    width: 80%;
+    max-width: 700px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--color-primary-light);
+    margin-bottom: 16px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+
+.propertypage-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.propertypage-thumbnail {
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+
+.propertypage-thumbnail.selected {
+    border: 2px solid var(--color-primary);
+}
+
+.propertypage-details {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.propertypage-info {
+    flex: 2 1 500px;
+}
+
+.propertypage-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.propertypage-location {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.propertypage-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.propertypage-summary {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+}
+
+.propertypage-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 18px;
+}
+
+.propertypage-feature {
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-radius: 16px;
+    padding: 4px 14px;
+    font-size: 0.98rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.propertypage-description {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 18px;
+}
+
+.propertypage-contact {
+    flex: 1 1 260px;
+    background: var(--color-bg);
+    border-radius: 10px;
+    padding: 24px 18px;
+    box-shadow: 0 1px 8px var(--color-primary-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+}
+
+.propertypage-contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--color-text);
+}
+
+.propertypage-contact-owner {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    color: var(--color-primary-dark);
+}
+
+.propertypage-contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.propertypage-contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--color-white);
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+}
+.propertypage-contact-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+@media (max-width: 900px) {
+    .propertypage-details {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .propertypage-carousel {
+        width: 100%;
+    }
+    .propertypage-main-image {
+        width: 100%;
+        height: 220px;
+    }
+}

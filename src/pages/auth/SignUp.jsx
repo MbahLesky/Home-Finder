@@ -1,7 +1,9 @@
+import { MdEmail, MdVisibility } from 'react-icons/md';
 import FilledButton from '../../components/FilledButton';
 import TextField from '../../components/TextField';
 import Title from '../../components/Title';
 import './auth.css';
+import { BiUser } from 'react-icons/bi';
 
 function SignUp() {
     return (
@@ -18,6 +20,8 @@ function SignUp() {
                 errorText="Name is required"
                 id="name"
                 value=""
+                isInvalid={true}
+                startElement={<BiUser />}
               />
 
               <TextField
@@ -35,6 +39,7 @@ function SignUp() {
                 errorText="Email is required"
                 id="email"
                 value=""
+                startElement={<MdEmail />}
               />
 
               {/* Password Field */}
@@ -44,6 +49,7 @@ function SignUp() {
                 label="Password"
                 errorText="Password is required"
                 id="password"
+                endElement={<MdVisibility />}
               />
 
               <a href="">Forgot Password</a>

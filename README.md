@@ -111,3 +111,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3. Navigate to prefered folder
 4. run the command `npx create-react-app project-name`
 5. Navigate to your project `cd project-name`
+
+Afanwi and Fabrise: Property Page
+Velma and Moffor: Home Page
+Daniella, Ibrahim, Felicity, Veginel, Larissa
