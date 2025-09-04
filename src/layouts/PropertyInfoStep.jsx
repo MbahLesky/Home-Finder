@@ -60,6 +60,7 @@ function PropertyInfoStep({ saleOrRent, onBack }) {
                   <label>Name</label>
                   <input type="text" value={propertyType} readOnly />
                 </div>
+                
                 <div>
                   <label>No of Rooms</label>
                   <input
