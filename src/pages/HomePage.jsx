@@ -1,7 +1,11 @@
+
+import PropertyMediaUpload from '../layouts/PropertyMediaUpload';
+
 function HomePage() {
     return (
         <div>
-            <h1>Welcome to Home Finder</h1>
+            
+            <PropertyMediaUpload />
         </div>
     )
 }
