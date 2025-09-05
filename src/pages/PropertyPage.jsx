@@ -1,6 +1,7 @@
 import './propertypage.css';
 import Images from '../assets/index';
 import React, { useState } from 'react';
+import OutlineButton from '../components/OutlineButton';
 
 const galleryImages = Images;
 
@@ -10,6 +11,29 @@ function PropertyPage() {
   const handleThumbnailClick = (idx) => {
     setMainIndex(idx);
   };
+
+  const contactActions = [
+    {
+      label: '📞 Call',
+      className: 'call',
+      onClick: () => window.open('tel:+237612345678'),
+    },
+    {
+      label: '💬 Message',
+      className: 'message',
+      onClick: () => window.open('sms:+237612345678'),
+    },
+    {
+      label: '✉️ Email',
+      className: 'email',
+      onClick: () => window.open('mailto:owner@email.com?subject=Property%20Inquiry'),
+    },
+    {
+      label: '🟢 Whatsapp',
+      className: 'whatsapp',
+      onClick: () => window.open('https://wa.me/237612345678?text=I%20am%20interested%20in%20your%20property'),
+    },
+  ];
 
   return (
     <div className="propertypage-container">
@@ -60,10 +84,10 @@ function PropertyPage() {
           <h1>Contact Owner</h1>
           <div className="owner-name">Fonbah Elias</div>
           <div className="contact-buttons contact-grid">
-            <button className="contact-btn call">📞 Call</button>
-            <button className="contact-btn message">💬 Message</button>
-            <button className="contact-btn email">✉️ Email</button>
-            <button className="contact-btn whatsapp">🟢 Whatsapp</button>
+            <OutlineButton startElement={<span>📞</span>} onClick={() => window.open('tel:+237612345678')}>Call</OutlineButton>
+            <OutlineButton startElement={<span>💬</span>} onClick={() => window.open('sms:+237612345678')}>Message</OutlineButton>
+            <OutlineButton startElement={<span>✉</span>} onClick={() => window.open('mailto:owner@email.com?subject=Property%20Inquiry')}>Email</OutlineButton>
+            <OutlineButton startElement={<span>🟢</span>} onClick={() => window.open('https://wa.me/237612345678?text=I%20am%20interested%20in%20your%20property')}>Whatsapp</OutlineButton>
           </div>
         </div>
       </div>
