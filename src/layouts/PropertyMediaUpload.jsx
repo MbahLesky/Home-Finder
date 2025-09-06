@@ -15,7 +15,7 @@ const sideSteps = [
   { name: 'Property Media', completed: false, current: true }
 ];
 
-export default function PropertyMediaUpload() {
+export default function PropertyMediaUpload({onBack, onSave, onNext}) {
   const [photos, setPhotos] = useState([]);
   const [video, setVideo] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -60,31 +60,24 @@ export default function PropertyMediaUpload() {
       setUploadMessage("Error uploading files.");
     }
     setUploading(false);
+    onSave();
   };
 
   return (
     <div className="pmu-page">
-      <nav className="pmu-topbar">
-        <div className="pmu-nav-icons">
-          {navItems.map((item, idx) => (
-            <span key={idx} className="pmu-nav-icon" title={item.name}>{item.icon}</span>
-          ))}
-        </div>
-      </nav>
       <div className="pmu-main">
-        <aside className="pmu-sidebar">
-          <div className="pmu-steps">
-            {sideSteps.map((step, idx) => (
-              <div key={idx} className={`pmu-step${step.completed ? ' completed' : ''}${step.current ? ' current' : ''}`}>
-                <div className="pmu-step-circle">{step.completed ? '✓' : idx + 1}</div>
-                <div className="pmu-step-name">{step.name}</div>
-              </div>
-            ))}
-          </div>
-        </aside>
         <main className="pmu-content">
-          <h1 className="pmu-title" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span style={{ cursor: 'pointer', fontSize: '32px' }} title="Go Back">🡸</span>
+          <h1
+            className="pmu-title"
+            style={{ display: "flex", alignItems: "center", gap: "12px" }}
+          >
+            <span
+              style={{ cursor: "pointer", fontSize: "32px" }}
+              title="Go Back"
+              onClick={onBack}
+            >
+              🡸
+            </span>
             Upload media for the property
           </h1>
           <div className="pmu-photo-section">
@@ -92,11 +85,17 @@ export default function PropertyMediaUpload() {
               {photos.length > 0
                 ? photos.map((photo, idx) => (
                     <div key={idx} className="pmu-photo-thumb">
-                      <img src={URL.createObjectURL(photo)} alt={`property-${idx}`} />
+                      <img
+                        src={URL.createObjectURL(photo)}
+                        alt={`property-${idx}`}
+                      />
                     </div>
                   ))
                 : Array.from({ length: 6 }).map((_, idx) => (
-                    <div key={idx} className="pmu-photo-thumb pmu-photo-placeholder">
+                    <div
+                      key={idx}
+                      className="pmu-photo-thumb pmu-photo-placeholder"
+                    >
                       <span>150 x 150</span>
                     </div>
                   ))}
@@ -104,10 +103,21 @@ export default function PropertyMediaUpload() {
             <div className="pmu-photo-actions">
               <label className="pmu-btn">
                 Select up to 6 Photos
-                <input type="file" multiple accept="image/*" onChange={handlePhotoSelect} style={{ display: 'none' }} />
+                <input
+                  type="file"
+                  multiple
+                  accept="image/*"
+                  onChange={handlePhotoSelect}
+                  style={{ display: "none" }}
+                />
               </label>
               <span className="pmu-selected">{photos.length} selected</span>
-              <button className="pmu-btn pmu-clear" onClick={() => setPhotos([])}>Clear Photos</button>
+              <button
+                className="pmu-btn pmu-clear"
+                onClick={() => setPhotos([])}
+              >
+                Clear Photos
+              </button>
             </div>
           </div>
           <div className="pmu-video-section">
@@ -123,14 +133,30 @@ export default function PropertyMediaUpload() {
             <div className="pmu-video-actions">
               <label className="pmu-btn">
                 Select a video
-                <input type="file" accept="video/*" onChange={handleVideoSelect} style={{ display: 'none' }} />
+                <input
+                  type="file"
+                  accept="video/*"
+                  onChange={handleVideoSelect}
+                  style={{ display: "none" }}
+                />
               </label>
-              <button className="pmu-btn pmu-clear" onClick={() => setVideo(null)}>Clear Video</button>
+              <button
+                className="pmu-btn pmu-clear"
+                onClick={() => setVideo(null)}
+              >
+                Clear Video
+              </button>
             </div>
-            <button className="pmu-btn pmu-upload" onClick={handleUpload} disabled={uploading}>
+            <button
+              className="pmu-btn pmu-upload"
+              onClick={handleUpload}
+              disabled={uploading}
+            >
               {uploading ? "Uploading..." : "Upload"}
             </button>
-            {uploadMessage && <div className="pmu-upload-message">{uploadMessage}</div>}
+            {uploadMessage && (
+              <div className="pmu-upload-message">{uploadMessage}</div>
+            )}
           </div>
         </main>
       </div>

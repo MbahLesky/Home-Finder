@@ -4,18 +4,30 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import "./PropertyInfoStep.css";
 
-function PropertyInfoStep({ saleOrRent, onBack }) {
-  const location = useLocation();
-  const propertyType = location.state?.propertyType || "";
 
+
+function PropertyInfoStep({ saleOrRent, onBack, onNext }) {
+  // Remove useLocation and use only props/state
   const [form, setForm] = useState({
+    propertyType: "",
     rooms: "",
     region: "",
     city: "",
     installment: "",
-    price: ""
+    price: "",
+    address: "",
+    latitude: "",
+    longitude: "",
+    additionalInfo: ""
   });
   const [message, setMessage] = useState("");
+
+  // Fill propertyType from prop on mount if not set
+  React.useEffect(() => {
+    if (!form.propertyType && saleOrRent) {
+      setForm((prev) => ({ ...prev, propertyType: saleOrRent }));
+    }
+  }, [saleOrRent]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,8 +39,10 @@ function PropertyInfoStep({ saleOrRent, onBack }) {
     e.preventDefault();
     if (!form.rooms || !form.region || !form.city || !form.installment || !form.price) {
       setMessage("Please input all required fields.");
+           onNext();
     } else {
       setMessage("All values are correct. You can move to the next step.");
+      onNext();
     }
   };
 
@@ -58,7 +72,13 @@ function PropertyInfoStep({ saleOrRent, onBack }) {
               <div className="input-box input-row">
                 <div>
                   <label>Name</label>
-                  <input type="text" value={propertyType} readOnly />
+                  <input
+                    type="text"
+                    name="propertyType"
+                    value={form.propertyType}
+                    onChange={handleChange}
+                    placeholder="Property type"
+                  />
                 </div>
                 
                 <div>
@@ -93,23 +113,44 @@ function PropertyInfoStep({ saleOrRent, onBack }) {
                   </div>
                   <div>
                     <label>City</label>
-                    <select name="city" value={form.city} onChange={handleChange}>
-                      <option value="">Select city</option>
-                      {/* Add city options here */}
-                    </select>
+                    <input
+                      type="text"
+                      name="city"
+                      value={form.city}
+                      onChange={handleChange}
+                      placeholder="Enter city"
+                    />
                   </div>
                 </div>
                 <label>Address</label>
-                <input type="text" placeholder="Enter address" />
+                <input
+                  type="text"
+                  name="address"
+                  value={form.address}
+                  onChange={handleChange}
+                  placeholder="Enter address"
+                />
                 <label style={{ fontWeight: "bold" }}>Map coordinates (optional)</label>
                 <div className="location-row">
                   <div>
                     <label>Latitude</label>
-                    <input type="text" placeholder="Enter latitude" />
+                    <input
+                      type="text"
+                      name="latitude"
+                      value={form.latitude}
+                      onChange={handleChange}
+                      placeholder="Enter latitude"
+                    />
                   </div>
                   <div>
                     <label>Longitude</label>
-                    <input type="text" placeholder="Enter longitude" />
+                    <input
+                      type="text"
+                      name="longitude"
+                      value={form.longitude}
+                      onChange={handleChange}
+                      placeholder="Enter longitude"
+                    />
                   </div>
                 </div>
               </div>
@@ -143,7 +184,12 @@ function PropertyInfoStep({ saleOrRent, onBack }) {
               </div>
               <div className="input-box">
                 <label>Additional Information</label>
-                <textarea placeholder="Additional Information"></textarea>
+                <textarea
+                  name="additionalInfo"
+                  value={form.additionalInfo}
+                  onChange={handleChange}
+                  placeholder="Additional Information"
+                ></textarea>
               </div>
               {message && (
                 <div style={{ color: message.includes("correct") ? "green" : "red", marginBottom: 10, textAlign: 'center' }}>
